@@ -1,0 +1,81 @@
+2020-09-20 20:39:37.772  INFO 20508 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8701
+2020-09-20 20:39:39.528  INFO 20508 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=rewardsauthenticationserver, profiles=[default], label=null, version=null, state=null
+2020-09-20 20:39:39.532  INFO 20508 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-file:///C:/learning/learningrepo/TechnicalGuide/JAVA/AdvancedJava/SPRING/Springmicroservices/Rewards/ConfigServer/dev/application.properties'}]
+2020-09-20 20:39:39.764  INFO 20508 --- [restartedMain] a.RewardsAuthenticationServerApplication : No active profile set, falling back to default profiles: default
+2020-09-20 20:39:42.764  INFO 20508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-09-20 20:39:43.094  INFO 20508 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 306ms. Found 1 JPA repository interfaces.
+2020-09-20 20:39:43.398  WARN 20508 --- [restartedMain] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-09-20 20:39:43.861  INFO 20508 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=dfdef266-6f21-31ef-8fea-73d870b37e82
+2020-09-20 20:39:46.120  INFO 20508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 0 (http)
+2020-09-20 20:39:46.143  INFO 20508 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-20 20:39:46.144  INFO 20508 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2020-09-20 20:39:48.160  INFO 20508 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-09-20 20:39:48.161  INFO 20508 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8364 ms
+2020-09-20 20:39:48.385  WARN 20508 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-20 20:39:48.386  INFO 20508 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-20 20:39:48.444  INFO 20508 --- [restartedMain] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6117c28b
+2020-09-20 20:39:49.004  INFO 20508 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-20 20:39:49.086  INFO 20508 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-09-20 20:39:49.263  INFO 20508 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2020-09-20 20:39:49.266  WARN 20508 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-09-20 20:39:49.737  INFO 20508 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-09-20 20:39:49.829  INFO 20508 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d84840b, org.springframework.security.web.context.SecurityContextPersistenceFilter@615011e5, org.springframework.security.web.header.HeaderWriterFilter@25669851, org.springframework.security.web.authentication.logout.LogoutFilter@4d342682, com.authentication.security.AuthenticateFilter@96e7f15, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@513ca7be, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14a6209, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e4e11e2, org.springframework.security.web.session.SessionManagementFilter@2380d9a8, org.springframework.security.web.access.ExceptionTranslationFilter@7fe18949, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bb522ca]
+2020-09-20 20:39:49.858  WARN 20508 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-09-20 20:39:49.858  INFO 20508 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-09-20 20:39:50.223  INFO 20508 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-09-20 20:39:51.699  INFO 20508 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-09-20 20:39:51.749  INFO 20508 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-09-20 20:39:54.007  INFO 20508 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-09-20 20:39:54.025  INFO 20508 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-09-20 20:39:54.076  WARN 20508 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-09-20 20:39:56.344  INFO 20508 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2020-09-20 20:39:56.376  INFO 20508 --- [RMI TCP Connection(1)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-20 20:39:56.377  INFO 20508 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-20 20:39:56.420  INFO 20508 --- [RMI TCP Connection(1)-127.0.0.1] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-09-20 20:39:56.468  WARN 20508 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-09-20 20:39:56.488  INFO 20508 --- [RMI TCP Connection(1)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 110 ms
+2020-09-20 20:39:57.038  INFO 20508 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 51499 (http) with context path ''
+2020-09-20 20:39:57.041  INFO 20508 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 51499
+2020-09-20 20:39:57.053  INFO 20508 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-09-20 20:39:57.160  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-09-20 20:39:57.404  INFO 20508 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-09-20 20:39:57.405  INFO 20508 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-09-20 20:39:57.984  INFO 20508 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-09-20 20:39:57.984  INFO 20508 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-09-20 20:39:58.395  INFO 20508 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-09-20 20:39:59.041  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-09-20 20:39:59.041  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-09-20 20:39:59.042  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-09-20 20:39:59.042  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-09-20 20:39:59.042  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-09-20 20:39:59.047  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-09-20 20:39:59.047  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-09-20 20:39:59.338  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-09-20 20:39:59.343  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-09-20 20:39:59.351  INFO 20508 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-09-20 20:39:59.360  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1600614599358 with initial instances count: 1
+2020-09-20 20:39:59.362  INFO 20508 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application REWARDSAUTHENTICATIONSERVER with eureka with status UP
+2020-09-20 20:39:59.363  INFO 20508 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1600614599363, current=UP, previous=STARTING]
+2020-09-20 20:39:59.367  INFO 20508 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REWARDSAUTHENTICATIONSERVER/rewardsauthenticationserver:ec5a2b8b004588a3e1dd741d70e2ee74:: registering service...
+2020-09-20 20:39:59.411  INFO 20508 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REWARDSAUTHENTICATIONSERVER/rewardsauthenticationserver:ec5a2b8b004588a3e1dd741d70e2ee74: - registration status: 204
+2020-09-20 20:40:00.315  INFO 20508 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-09-20 20:40:00.804  INFO 20508 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-09-20 20:40:00.810  INFO 20508 --- [restartedMain] a.RewardsAuthenticationServerApplication : Started RewardsAuthenticationServerApplication in 27.395 seconds (JVM running for 35.639)
+2020-09-20 20:40:00.819  INFO 20508 --- [restartedMain] c.a.controller.AuthController            : Info level log message
+2020-09-20 20:40:00.820 ERROR 20508 --- [restartedMain] c.a.controller.AuthController            : Error level log message
+2020-09-20 20:40:26.456  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-09-20 20:40:26.459  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application REWARDSAUTHENTICATIONSERVER with eureka with status DOWN
+2020-09-20 20:40:26.460  WARN 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1600614626460, current=DOWN, previous=UP]
+2020-09-20 20:40:26.461  INFO 20508 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REWARDSAUTHENTICATIONSERVER/rewardsauthenticationserver:ec5a2b8b004588a3e1dd741d70e2ee74:: registering service...
+2020-09-20 20:40:26.478  INFO 20508 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REWARDSAUTHENTICATIONSERVER/rewardsauthenticationserver:ec5a2b8b004588a3e1dd741d70e2ee74: - registration status: 204
+2020-09-20 20:40:27.094  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-09-20 20:40:27.098  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-09-20 20:40:27.169  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-09-20 20:40:27.176  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-20 20:40:27.182  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-09-20 20:40:27.228  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-09-20 20:40:27.230  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2020-09-20 20:40:30.235  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2020-09-20 20:40:30.283  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_REWARDSAUTHENTICATIONSERVER/rewardsauthenticationserver:ec5a2b8b004588a3e1dd741d70e2ee74: - deregister  status: 200
+2020-09-20 20:40:30.282  WARN 20508 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2020-09-20 20:40:30.377  INFO 20508 --- [RMI TCP Connection(4)-127.0.0.1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
