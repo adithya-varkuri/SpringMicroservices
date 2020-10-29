@@ -1,5 +1,10 @@
 package com.authentication.controller;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import javax.validation.Valid;
 
 import org.apache.logging.log4j.LogManager;
@@ -14,6 +19,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +32,9 @@ import com.authentication.responses.MessageResponse;
 import com.authentication.service.UserService;
 import com.authentication.serviceimpl.UserDetailsImpl;
 import com.authentication.util.JwtUtils;
+
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
 
 //use model mapper
 
@@ -66,7 +75,7 @@ public class AuthController {
 	@Autowired
 	PasswordEncoder encoder;
 
-	@PostMapping(path = "/login", consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	@PostMapping(path = "/signin", consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
 	// @Valid is used to validate the values inthe body
 	//@Valid is used to validate the values inthe body
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -90,6 +99,7 @@ public class AuthController {
 		 * If we want to get more data (id, email…), we can create an implementation of
 		 * this UserDetails interface. like UserDetailsImpl
 		 */
+		
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(loginRequest.getUserName(), loginRequest.getPassword()));
 
@@ -97,11 +107,15 @@ public class AuthController {
 		String jwt = jwtUtils.generateJwtToken(authentication);
 		
 		UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();		
+		List<String> roles = userDetails.getAuthorities().stream()
+				.map(item -> item.getAuthority())
+				.collect(Collectors.toList());
 
 		return ResponseEntity.ok(new JwtResponse(jwt, 
 												 userDetails.getId(), 
 												 userDetails.getUsername(), 
-												 userDetails.getEmail()));
+												 userDetails.getEmail(), 
+												 roles));
 	}
 
 

@@ -57,7 +57,7 @@ public class AuthenticateFilter extends UsernamePasswordAuthenticationFilter {
 	protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain,
 			Authentication authResult) throws IOException, ServletException {
 
-		UserDetailsImpl userDetails = (UserDetailsImpl) authResult.getPrincipal();
+		/**UserDetailsImpl userDetails = (UserDetailsImpl) authResult.getPrincipal();
 		userDetails.getUsername();
 		userDetailsService.loadUserByUsername(userDetails.getUsername());
 		String jwtToken = Jwts.builder().setSubject((userDetails.getUsername())).setIssuedAt(new Date())
@@ -65,7 +65,7 @@ public class AuthenticateFilter extends UsernamePasswordAuthenticationFilter {
 						(new Date()).getTime() + Long.valueOf(configProp.getConfigValue("app.jwtExpirationMs"))))
 				.signWith(SignatureAlgorithm.HS512, configProp.getConfigValue("app.jwtSecret")).compact();
 		response.addHeader("token", jwtToken);
-		response.addHeader("userId", userDetails.getUsername());
+		response.addHeader("userId", userDetails.getUsername());**/
 
 	}
 	

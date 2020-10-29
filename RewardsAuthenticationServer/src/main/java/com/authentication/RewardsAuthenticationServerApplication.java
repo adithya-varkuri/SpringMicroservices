@@ -64,7 +64,15 @@ src/
 		"com.authentication.service", "com.authentication.serviceimpl", "com.authentication.repositories",
 		"com.authentication.config", "com.authentication.util", "com.authentication.entities",
 		"com.authentication.models","com.authentication.exception" })
+/*
+ * @EnableDiscoveryClient annotation can work with any Discovery Client
+ * implementations which implements in your project ( Eureka, Consul, Zookeeper
+ * ) . You can also use @EnableEurekaClient annotation but it works only with
+ * Eureka Discovery Client implementation
+ */
+//https://springbootdev.com/2018/01/15/microservices-service-registration-and-discover-in-netflix-eureka/
 @EnableDiscoveryClient
+
 public class RewardsAuthenticationServerApplication {
 	private static final Logger LOGGER = LogManager.getLogger(AuthController.class.getName());
 

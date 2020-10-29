@@ -27,7 +27,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 		http.cors();
 		http.csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		http.authorizeRequests().antMatchers(HttpMethod.POST,"/rewardsauthenticationserver/login").permitAll()
+		http.authorizeRequests().antMatchers(HttpMethod.POST,"/rewardsauthenticationserver/api/auth/signin").permitAll()
 		.antMatchers(HttpMethod.POST,"/rewardsauthenticationserver/api/auth/signup").permitAll()
 		.antMatchers("/rewardsauthenticationserver/actuator/*").permitAll()
 		.antMatchers("/actuator/*").permitAll()

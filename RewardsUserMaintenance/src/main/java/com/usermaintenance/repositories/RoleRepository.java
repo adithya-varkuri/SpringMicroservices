@@ -11,5 +11,7 @@ import com.usermaintenance.entities.Role;
 public interface RoleRepository extends  JpaRepository<Role, Integer> {
 	
 	List<Role> findByRole(String role);
+	
+	
 
 }

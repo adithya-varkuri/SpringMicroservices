@@ -1,11 +1,13 @@
 package com.authentication.serviceimpl;
 
 
-import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import com.authentication.entities.User;
@@ -54,13 +56,16 @@ public class UserDetailsImpl implements UserDetails {
 	 * as @PreAuthorize("hasAuthority('ROLE_XYZ')").
 	 */
 	public static UserDetailsImpl build(User user) {
+		List<GrantedAuthority> authorities = user.getRoles().stream()
+				.map(role -> new SimpleGrantedAuthority(role.getRole()))
+				.collect(Collectors.toList());
 		
 
 		return new UserDetailsImpl(
 				user.getId(), 
 				user.getUsername(), 
 				user.getEmail(),
-				user.getPassword(),new ArrayList<GrantedAuthority>());
+				user.getPassword(),authorities);
 	}
 
 	@Override
